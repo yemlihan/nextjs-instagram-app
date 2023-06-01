@@ -1,0 +1,27 @@
+{
+  "monetization_eligibility": [
+    {
+      "title": "",
+      "media_map_data": {
+        
+      },
+      "string_map_data": {
+        "\u00c3\u009cr\u00c3\u00bcn Ad\u00c4\u00b1": {
+          "href": "",
+          "value": "BRANDED CONTENT",
+          "timestamp": 0
+        },
+        "Karar": {
+          "href": "",
+          "value": "Not Eligible",
+          "timestamp": 0
+        },
+        "Neden": {
+          "href": "",
+          "value": "An Established Presence\nThese standards define our requirements for how long your account has been active and that you have a sufficient number of followers.",
+          "timestamp": 0
+        }
+      }
+    }
+  ]
+}
