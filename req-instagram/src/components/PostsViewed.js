@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { fetchPostViewed } from "../store/actions/postviewed";
 
 export default function RecentlyFollow() {
-  const postsViewed = useSelector((state) => state.postsviewed.postsViewed);
+  const postsViewed = useSelector((state) => state.postsviewed.postsViewed) || [];
   const dispatch = useDispatch();
 
   useEffect(() => {

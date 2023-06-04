@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchRecent = () => {
   return (dispatch) => {
     axios
-      .get("http://localhost:3001/recent")
+      .get(`${process.env.apiUrl}/recent`)
       .then((response) => {
         if (
           response.data.relationships_permanent_follow_requests &&

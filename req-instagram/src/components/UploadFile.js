@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchRecent } from "../store/actions/recent";
 import { fetchGts } from "../store/actions/gtfollowers";
 import { fetchUnfollow } from "../store/actions/unfollowed";
+import { fetchPostViewed } from "@/store/actions/postviewed";
 
 export default function UploadFiles() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ export default function UploadFiles() {
         dispatch(fetchRecent());
         dispatch(fetchGts());
         dispatch(fetchUnfollow());
+        dispatch(fetchPostViewed);
       })
       .catch((err) => {
         console.error(err);

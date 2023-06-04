@@ -77,7 +77,7 @@ app.get("/gts", (req, res) => {
             const jsonDataParsed = JSON.parse(jsonData);
             const newArr = [];
             newArr.push(jsonDataParsed);
-            const newJsonData = newArr.map((item) => {
+            const newJsonData =  newArr.map((item) => {
               return item.string_list_data;
             });
             newJsonData.map((item) => {
@@ -117,10 +117,14 @@ app.get("/gts", (req, res) => {
 
   Promise.all([getFollowers(), getFollowing()])
     .then((results) => {
+     if (results[0].length > 0 && results[1].length > 0) {
       const followers = results[0];
       const following = results[1];
       const allUsers = [...followers, ...following];
-      res.send(allUsers);
+      return res.status(200).send(allUsers);
+     }else {
+      return res.status(200).send({message: "null upload folder"})
+     }
     })
     .catch((err) => {
       console.error(err);
@@ -130,37 +134,49 @@ app.get("/gts", (req, res) => {
 //Takip istegine dönmeyenler
 app.get("/recent", (req, res) => {
   const filePath = findFileByName(rootDir, "recent_follow_requests.json");
-  fs.readFile(filePath, (err, data) => {
-    if (err) return res.status(200).send({ message: "error File!!!" });
-    const jsonData = JSON.parse(data);
-    res.send(jsonData);
-  });
+  if (filePath) {
+    fs.readFile(filePath, (err, data) => {
+      if (err) return res.status(200).send({ message: "error File!!!" });
+      const jsonData = JSON.parse(data);
+      res.send(jsonData);
+    });
+  } else {
+    return res.status(200).send({message: "null upload folder"})
+  }
 });
 
 //son takipten cıktıklarımız
 app.get("/unfollow", (req, res) => {
   const filePath = findFileByName(rootDir, "recently_unfollowed_accounts.json");
-  fs.readFile(
-    filePath,
-    (err, data) => {
-      if (err) return res.status(200).send({ message: "error File!!!" });
-      const jsonData = JSON.parse(data);
-      res.send(jsonData);
-    }
-  );
+  if (filePath) {
+    fs.readFile(
+      filePath,
+      (err, data) => {
+        if (err) return res.status(200).send({ message: "error File!!!" });
+        const jsonData = JSON.parse(data);
+        res.send(jsonData);
+      }
+    );
+  } else {
+    return res.status(200).send({ message: "null upload folder"})
+  }
 });
 
 //gezdigin profiller
 app.get("/postsviewed", (req, res) => {
   const filePath = findFileByName(rootDir, "posts_viewed.json");
-  fs.readFile(
-    filePath,
-    (err, data) => {
-      if (err) return res.status(200).send({ message: "error File!!!" });
-      const jsonData = JSON.parse(data);
-      res.send(jsonData);
-    }
-  );
+  if (filePath) {
+    fs.readFile(
+      filePath,
+      (err, data) => {
+        if (err) return res.status(200).send({ message: "error File!!!" });
+        const jsonData = JSON.parse(data);
+        res.send(jsonData);
+      }
+    );
+  } else {
+    return res.status(200).send({ message: "null upload folder"})
+  }
 });
 
 //server başlatma
