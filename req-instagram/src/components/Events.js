@@ -2,6 +2,7 @@ import React from "react";
 import User from "./ReqUsers";
 import GtFollow from "./GtFollow";
 import RecentlyFollow from "./RecentlyFollow";
+import PostsViewed from './PostsViewed';
 
 export default function Events({ users }) {
   return (
@@ -9,6 +10,7 @@ export default function Events({ users }) {
         <User />
         <RecentlyFollow users={users}/>
         <GtFollow />
+        <PostsViewed />
       </div>
   );
 }

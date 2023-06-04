@@ -1,0 +1,33 @@
+{
+  "participants": [
+    {
+      "name": "Volvo Car Tu\u00cc\u0088rkiye"
+    },
+    {
+      "name": "FireBall"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "FireBall",
+      "timestamp_ms": 1683721157856,
+      "content": "mustanggg"
+    }
+  ],
+  "title": "Volvo Car Tu\u00cc\u0088rkiye",
+  "is_still_participant": true,
+  "thread_path": "inbox/volvocarturkiye_1160741328658928",
+  "magic_words": [
+    
+  ]
+}amp_ms": 1683721070329,
+      "content": "a 1011111"
+    }
+  ],
+  "title": "A101",
+  "is_still_participant": true,
+  "thread_path": "inbox/a101_1183643419701027",
+  "magic_words": [
+    
+  ]
+}

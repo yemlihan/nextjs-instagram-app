@@ -74,7 +74,10 @@ app.get("/gts", (req, res) => {
           if (path.extname(file) === ".json" && file === "followers_1.json") {
             const filePath = path.join("./uploads", file);
             const jsonData = fs.readFileSync(filePath, "utf-8");
-            const newJsonData = JSON.parse(jsonData).map((item) => {
+            const jsonDataParsed = JSON.parse(jsonData);
+            const newArr = [];
+            newArr.push(jsonDataParsed);
+            const newJsonData = newArr.map((item) => {
               return item.string_list_data;
             });
             newJsonData.map((item) => {
@@ -137,6 +140,19 @@ app.get("/recent", (req, res) => {
 //son takipten cıktıklarımız
 app.get("/unfollow", (req, res) => {
   const filePath = findFileByName(rootDir, "recently_unfollowed_accounts.json");
+  fs.readFile(
+    filePath,
+    (err, data) => {
+      if (err) return res.status(200).send({ message: "error File!!!" });
+      const jsonData = JSON.parse(data);
+      res.send(jsonData);
+    }
+  );
+});
+
+//gezdigin profiller
+app.get("/postsviewed", (req, res) => {
+  const filePath = findFileByName(rootDir, "posts_viewed.json");
   fs.readFile(
     filePath,
     (err, data) => {

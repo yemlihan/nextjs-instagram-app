@@ -9,7 +9,7 @@ export default function Followers() {
         <h2 id="accordion-collapse-heading-3" className="text-xs">
           <button
             type="button"
-            className="flex justify-between items-center w-full block bg-gray-700 text-white hover:bg-white hover:text-gray-700 max-w-sm p-6 border border-gray-200 rounded-lg shadow cursor-pointer"
+            className="flex justify-between items-center w-full bg-gray-700 text-white hover:bg-white hover:text-gray-700 max-w-sm p-6 border border-gray-200 rounded-lg shadow cursor-pointer"
             data-accordion-target="#accordion-collapse-body-3"
             aria-expanded="false"
             aria-controls="accordion-collapse-body-3"
