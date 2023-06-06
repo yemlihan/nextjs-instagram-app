@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchGts = () => {
   return (dispatch) => {
     axios
-      .get(`${process.env.apiUrl}/gts`)
+      .get(`${process.env.apiUrl}/api/gts`)
       .then((response) => {
         if (response.data && response.data.length > 0) {
           const gts = response.data.map((item) => {

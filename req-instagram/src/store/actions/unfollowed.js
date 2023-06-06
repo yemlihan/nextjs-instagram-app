@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchUnfollow = () => {
   return (dispatch) => {
     axios
-      .get(`${process.env.apiUrl}/unfollow`)
+      .get(`${process.env.apiUrl}/api/unfollow`)
       .then((response) => {
         if (
           response.data.relationships_unfollowed_users &&

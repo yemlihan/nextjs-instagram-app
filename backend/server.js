@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //upload ettigimiz method
-app.post("/upload", upload.array("files"), (req, res) => {
+app.post("/api/upload", upload.array("files"), (req, res) => {
   const files = req.files;
   if (files.length === 0) {
     return res.status(200).send({ message: "Wrong File!!!" });
@@ -62,7 +62,7 @@ const rootDir = './uploads';
 
 
 //takip ettigimiz ama takip etmeyenler listesi
-app.get("/gts", (req, res) => {
+app.get("/api/gts", (req, res) => {
   const getFollowers = () => {
     return new Promise((resolve, reject) => {
       const jsonFilesFollowers = [];
@@ -132,7 +132,7 @@ app.get("/gts", (req, res) => {
 });
 
 //Takip istegine dönmeyenler
-app.get("/recent", (req, res) => {
+app.get("/api/recent", (req, res) => {
   const filePath = findFileByName(rootDir, "recent_follow_requests.json");
   if (filePath) {
     fs.readFile(filePath, (err, data) => {
@@ -146,7 +146,7 @@ app.get("/recent", (req, res) => {
 });
 
 //son takipten cıktıklarımız
-app.get("/unfollow", (req, res) => {
+app.get("/api/unfollow", (req, res) => {
   const filePath = findFileByName(rootDir, "recently_unfollowed_accounts.json");
   if (filePath) {
     fs.readFile(
@@ -163,7 +163,7 @@ app.get("/unfollow", (req, res) => {
 });
 
 //gezdigin profiller
-app.get("/postsviewed", (req, res) => {
+app.get("/api/postsviewed", (req, res) => {
   const filePath = findFileByName(rootDir, "posts_viewed.json");
   if (filePath) {
     fs.readFile(

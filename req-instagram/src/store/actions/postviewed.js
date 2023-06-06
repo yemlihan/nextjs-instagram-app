@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchPostViewed = () => {
   return (dispatch) => {
     axios
-      .get(`${process.env.apiUrl}/postsviewed`)
+      .get(`${process.env.apiUrl}/api/postsviewed`)
       .then((response) => {
         if (
           response.data.impressions_history_posts_seen &&

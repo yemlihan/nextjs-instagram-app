@@ -1,6 +1,5 @@
 import axios from "axios";
-import Events from "./Events";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchRecent } from "../store/actions/recent";
 import { fetchGts } from "../store/actions/gtfollowers";
 import { fetchUnfollow } from "../store/actions/unfollowed";
@@ -18,7 +17,7 @@ export default function UploadFiles() {
     }
 
     axios
-      .post("http://localhost:3001/upload", formData, {
+      .post(`${process.env.apiUrl}/api/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
