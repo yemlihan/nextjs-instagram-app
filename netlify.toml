@@ -2,8 +2,7 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/api/*"
-  to = "https://nextjsappinstagram.netlify.app/.netlify/functions/:splat"
+  from = "/api/:txHash"
+  to = "/.netlify/functions/:txHash"
   status = 200
-
   
