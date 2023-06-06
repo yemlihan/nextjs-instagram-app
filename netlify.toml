@@ -1,4 +1,29 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://nextjsappinstagram.netlify.app/:splat"
-  status = 301
+  [[redirects]]
+  from = "/upload"
+  to = "https://nextjsappinstagram.netlify.app/api"
+  status = 200
+  force = true 
+
+  [[redirects]]
+  from = "/recent"
+  to = "https://nextjsappinstagram.netlify.app/api"
+  status = 200
+  force = true 
+
+  [[redirects]]
+  from = "/gts"
+  to = "https://nextjsappinstagram.netlify.app/api"
+  status = 200
+  force = true 
+
+  [[redirects]]
+  from = "/postsviewed"
+  to = "https://nextjsappinstagram.netlify.app/api"
+  status = 200
+  force = true 
+
+  [[redirects]]
+  from = "/unfollow"
+  to = "https://nextjsappinstagram.netlify.app/api"
+  status = 200
+  force = true 
