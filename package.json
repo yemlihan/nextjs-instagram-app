@@ -1,5 +1,31 @@
 {
   "devDependencies": {
     "netlify-cli": "^15.3.1"
+  },
+  "name": "web-app-instagram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Netlify build command'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemlihan/nextjs-instagram-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yemlihan/nextjs-instagram-app/issues"
+  },
+  "homepage": "https://github.com/yemlihan/nextjs-instagram-app#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7"
   }
 }
