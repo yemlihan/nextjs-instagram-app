@@ -1,6 +1,4 @@
 import React from "react";
-import { Accordion } from "flowbite";
-import { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite";
 
 export default function Follow() {
   return (
@@ -9,7 +7,7 @@ export default function Follow() {
         <h2 id="accordion-collapse-heading-6" className="text-xs">
           <button
             type="button"
-            className="flex justify-between items-center w-full block bg-gray-700 text-white hover:bg-white hover:text-gray-700 max-w-sm p-6 border border-gray-200 rounded-lg shadow cursor-pointer"
+            className="flex justify-between items-center w-full bg-gray-700 text-white hover:bg-white hover:text-gray-700 max-w-sm p-6 border border-gray-200 rounded-lg shadow cursor-pointer"
             data-accordion-target="#accordion-collapse-body-6"
             aria-expanded="false"
             aria-controls="accordion-collapse-body-6"
