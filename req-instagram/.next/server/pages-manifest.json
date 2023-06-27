@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/unfollow": "pages/api/unfollow.js",
-  "/api/postsviewed": "pages/api/postsviewed.js",
-  "/api/gts": "pages/api/gts.js",
   "/": "pages/index.js",
-  "/api/recent": "pages/api/recent.js"
+  "/api/unfollow": "pages/api/unfollow.js",
+  "/api/gts": "pages/api/gts.js",
+  "/api/recent": "pages/api/recent.js",
+  "/api/postsviewed": "pages/api/postsviewed.js"
 }
