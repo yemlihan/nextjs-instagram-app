@@ -1,0 +1,42 @@
+{
+  "account_history_registration_info": [
+    {
+      "title": "",
+      "media_map_data": {
+        
+      },
+      "string_map_data": {
+        "Kullan\u00c4\u00b1c\u00c4\u00b1 ad\u00c4\u00b1": {
+          "href": "",
+          "value": "FireBall",
+          "timestamp": 0
+        },
+        "IP Adresi": {
+          "href": "",
+          "value": "95.70.129.179",
+          "timestamp": 0
+        },
+        "Zaman": {
+          "href": "",
+          "value": "",
+          "timestamp": 1597850026
+        },
+        "E-posta": {
+          "href": "",
+          "value": "firebasedatabase13@gmail.com",
+          "timestamp": 0
+        },
+        "Telefon Numaras\u00c4\u00b1": {
+          "href": "",
+          "value": "",
+          "timestamp": 0
+        },
+        "Cihaz": {
+          "href": "",
+          "value": "",
+          "timestamp": 0
+        }
+      }
+    }
+  ]
+}

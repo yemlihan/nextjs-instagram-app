@@ -1,0 +1,27 @@
+{
+  "account_history_imprecise_last_known_location": [
+    {
+      "title": "",
+      "media_map_data": {
+        
+      },
+      "string_map_data": {
+        "Kesin Olmayan Enlem": {
+          "href": "",
+          "value": "0",
+          "timestamp": 0
+        },
+        "Kesin Olmayan Boylam": {
+          "href": "",
+          "value": "0",
+          "timestamp": 0
+        },
+        "Y\u00c3\u00bckleme Zaman\u00c4\u00b1": {
+          "href": "",
+          "value": "",
+          "timestamp": 0
+        }
+      }
+    }
+  ]
+}

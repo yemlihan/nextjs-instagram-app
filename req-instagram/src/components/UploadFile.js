@@ -29,7 +29,7 @@ export default function UploadFiles() {
         dispatch(fetchRecent());
         dispatch(fetchGts());
         dispatch(fetchUnfollow());
-        dispatch(fetchPostViewed);
+        dispatch(fetchPostViewed());
       })
       .catch((err) => {
         console.error(err);
