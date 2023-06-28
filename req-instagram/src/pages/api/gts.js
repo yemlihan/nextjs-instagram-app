@@ -6,13 +6,13 @@ export default function handler(req, res) {
     const getFollowers = () => {
       return new Promise((resolve, reject) => {
         const jsonFilesFollowers = [];
-        fs.readdir("./uploads", (err, files) => {
+        fs.readdir(path.join(process.cwd(), "uploads"), (err, files) => {
           if (err) {
             return reject(err);
           }
           files.forEach((file) => {
             if (path.extname(file) === ".json" && file === "followers_1.json") {
-              const filePath = path.join("./uploads", file);
+              const filePath = path.join(process.cwd(), "uploads", file);
               const jsonData = fs.readFileSync(filePath, "utf-8");
               const jsonDataParsed = JSON.parse(jsonData);
               const newArr = [];
@@ -33,13 +33,13 @@ export default function handler(req, res) {
     const getFollowing = () => {
       return new Promise((resolve, reject) => {
         const jsonFilesFollowing = [];
-        fs.readdir("./uploads", (err, files) => {
+        fs.readdir(path.join(process.cwd(), "uploads"), (err, files) => {
           if (err) {
             return reject(err);
           }
           files.forEach((file) => {
             if (path.extname(file) === ".json" && file === "following.json") {
-              const filePath = path.join("./uploads", file);
+              const filePath = path.join(process.cwd(), "uploads", file);
               const jsonData = fs.readFileSync(filePath, "utf-8");
               const followings = JSON.parse(jsonData).relationships_following;
               const newJsonData = followings.map((item) => {

@@ -1,9 +1,10 @@
 import { rootDir, findFileByName } from "./config";
 import fs from "fs";
+import path from "path";
 
 export default function handler(req, res) {
   if (req.method === "GET") {
-    const filePath = findFileByName(rootDir, "recent_follow_requests.json");
+    const filePath = findFileByName(path.join(process.cwd(), rootDir), "recent_follow_requests.json");
     if (filePath) {
       fs.readFile(filePath, (err, data) => {
         if (err) return res.status(200).send({ message: "error File!!!" });

@@ -17,6 +17,7 @@ export default function handler(req, res) {
       res.send({ items: req.files, message: "Successful" });
     });
   } else if (req.method === "GET") {
+    // Buraya GET işlemleri için gerekli kodları ekleyin (isteğe bağlı)
   }
 }
 
